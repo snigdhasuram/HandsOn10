@@ -178,20 +178,20 @@ void print(const struct HashTable* ht) {
 
 int main() {
     
-    struct HashTable* ht = initHashTable(5, 0.5);
+    struct HashTable* ht = initHashTable(10, 0.5);
 
 
     insert(ht, 5, 50);
     insert(ht, 10, 150);
-    insert(ht, 15, 250);
-    insert(ht, 20, 350);
+    insert(ht, 20, 250);
+    insert(ht, 30, 350);
   
     print(ht);
 
     printf("Value for key 5: %d\n", get(ht, 5));
-    printf("Value for key 15: %d\n", get(ht, 15));
+    printf("Value for key 15: %d\n", get(ht, 20));
 
-    removeKey(ht, 15);
+    removeKey(ht, 20);
 
     print(ht);
 
